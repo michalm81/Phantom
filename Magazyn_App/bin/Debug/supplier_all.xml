@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSupplier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Supplier>
+    <supplier_name>Dilara sp. j.</supplier_name>
+    <nip_number>675-678-98-76</nip_number>
+    <city_name>Opole </city_name>
+    <street_name>Niemodlińska 7</street_name>
+    <supplier_guid>55a510f0-ee94-4bf4-a555-5292e37783d0</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Zafira sp. z o.o.</supplier_name>
+    <nip_number>768-594-84-73</nip_number>
+    <city_name>Opole </city_name>
+    <street_name>Żeromskiego 9</street_name>
+    <supplier_guid>fab75f5d-15e1-4961-a3c6-8e87ec2adc7a</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Warzywa &amp; Owoce</supplier_name>
+    <nip_number>687-968-57-58</nip_number>
+    <city_name>Wrocław</city_name>
+    <street_name>Krakowska 67</street_name>
+    <supplier_guid>602b8dba-ca9c-439e-8635-165094ba0737</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Lucy's Milk</supplier_name>
+    <nip_number>687-968-59-49</nip_number>
+    <city_name>Opole </city_name>
+    <street_name>Sienkiewicz 2</street_name>
+    <supplier_guid>fb0b8e09-5db6-4915-8994-fc8de1e976af</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Owocowa Hurtownia sp. z o.o.</supplier_name>
+    <nip_number>454-576-89-87</nip_number>
+    <city_name>Wrocław</city_name>
+    <street_name>Traugutta 7</street_name>
+    <supplier_guid>03566f23-02dd-496a-a51b-d2002ff20122</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Dilara sp. j.</supplier_name>
+    <nip_number>675-678-98-76</nip_number>
+    <city_name>Opole </city_name>
+    <street_name>Niemodlińska 7</street_name>
+    <supplier_guid>26167304-e374-4334-b9bc-611225040a80</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Owocowa Hurtownia sp. z o.o.</supplier_name>
+    <nip_number>454-576-89-87</nip_number>
+    <city_name>Wrocław</city_name>
+    <street_name>Traugutta 7</street_name>
+    <supplier_guid>0fc4215f-0671-418e-8d29-3e1a6dbd1e61</supplier_guid>
+  </Supplier>
+</ArrayOfSupplier>

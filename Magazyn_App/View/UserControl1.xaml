@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="Magazyn_App.View.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             xmlns:views="clr-namespace:Magazyn_App.View"
+             xmlns:vm="clr-namespace:Magazyn_App.ViewModel"
+             xmlns:local="clr-namespace:Magazyn_App"
+             mc:Ignorable="d" 
+             d:DesignHeight="230" d:DesignWidth="543" Style="{StaticResource storeusercontrolstyle}">
+    <UserControl.DataContext>
+        <vm:DeliveryAndMerchVM x:Name="deliveryandmerch"/>
+    </UserControl.DataContext>
+    <i:Interaction.Behaviors>
+        <local:OpenCloseWindowBehavior WindowType="views:Window1" Open="{Binding NewOrderWindowOpen, Mode=TwoWay}" DataContext="{Binding }" />
+        <local:OpenCloseWindowBehavior WindowType="views:Window2" Open="{Binding OrdersHistoryWindowOpen, Mode=TwoWay}" DataContext="{Binding}"/>
+        <local:OpenCloseWindowBehavior WindowType="views:Window3" Open="{Binding SupplyWindowOpen, Mode=TwoWay}"  DataContext="{Binding}"/>
+        <local:OpenCloseWindowBehavior WindowType="views:Window4" Open="{Binding SuppliesHistoryWindowOpen, Mode=TwoWay}" DataContext="{Binding}"/>
+        <local:OpenCloseWindowBehavior WindowType="views:NewOrderWindow" Open="{Binding NewSupplierWindowOpen, Mode=TwoWay}" DataContext="{Binding}"/>
+    </i:Interaction.Behaviors>
+    <Grid Margin="0,0,10,0" Height="224" VerticalAlignment="Top" Width="533">
+        <Button Style="{StaticResource storebuttonstyle}" Content="nowe zamówienie" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Width="102" Height="48" Command="{Binding OpenNewOrderWindowCommand}" CommandParameter="true">
+
+        </Button>
+        <Button Style="{StaticResource storebuttonstyle}" Content="dostawa" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="102" Height="48" Command="{Binding OpenSupplyWindowCommand}" CommandParameter="true"/>
+       <!-- <ListView Style="{StaticResource storelistviewstyle}" HorizontalAlignment="Left" Height="100" Margin="126,28,0,0" VerticalAlignment="Top" Width="400" ItemsSource="{Binding Path=DAMList}"  ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectedItem="{Binding Selected_Item}" SelectionMode="Single">
+        <ListView.View>
+            <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Path=dlv.realised}" Command="{Binding Source={x:Reference deliveryandmerch}, Path=SaveStatusCmd}" CommandParameter="{Binding}" Width="20" Margin="20,0,0,0"></CheckBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Zrealizowane" TextAlignment="Center" Width="71"></TextBlock>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=mrc.name}" Width="110" TextAlignment="Center"></TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Towar" TextAlignment="Center" Width="110"></TextBlock>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Path=mrc.amount}" Margin="20,0,2,0" />
+                                        <TextBlock Text="{Binding Path=mrc.unit}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Ilość" TextAlignment="Center" Width="71"></TextBlock>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=spl.supplier_name}" Width="190" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Dostawca" TextAlignment="Center" Width="190"></TextBlock>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=dlv.date, StringFormat=d}" Width="130" TextAlignment="Center"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            <GridViewColumn.Header>
+                                <TextBlock Text="Data" Width="130" TextAlignment="Center"/>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+
+        <DataGrid ItemsSource="{ Binding Path=DAMList}" SelectedItem="{Binding Selected_Item}" Margin="126,28,10,84" Width="397" AutoGenerateColumns="False" ColumnWidth="*" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeColumns="False" CanUserResizeRows="False" RowHeaderWidth="0">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="zrealizowane" HeaderStyle="{StaticResource CenterTextAtHeaderStyle}" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox  IsChecked="{Binding Path=dlv.realised, UpdateSourceTrigger=PropertyChanged}" Command="{Binding Source={x:Reference deliveryandmerch}, Path=SaveStatusCmd}" CommandParameter="{Binding}" Width="20" Margin="10,0,0,0"></CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="towar" Binding="{Binding Path=mrc.name}" HeaderStyle="{StaticResource CenterTextAtHeaderStyle}" CellStyle="{StaticResource CenterTextAtCell}"/>
+                <DataGridTemplateColumn Header="ilość" HeaderStyle="{StaticResource CenterTextAtHeaderStyle}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Path=mrc.amount}" Margin="19,0,4,0"/>
+                                <TextBlock Text="{Binding Path=mrc.unit}" TextAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="dostawca" Binding="{Binding Path=spl.supplier_name}" HeaderStyle="{StaticResource CenterTextAtHeaderStyle}" CellStyle="{StaticResource CenterTextAtCell}"/>
+                <DataGridTextColumn Header="data" Binding="{Binding Path=dlv.date, StringFormat=d}" HeaderStyle="{StaticResource CenterTextAtHeaderStyle}" CellStyle="{StaticResource CenterTextAtCell}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Style="{StaticResource storebuttonstyle}" Content="Historia zamówień" HorizontalAlignment="Left" Margin="126,145,0,0" VerticalAlignment="Top" Width="397" Command="{Binding OpenOrdersHistoryWindowCommand}" CommandParameter="true"/>
+        <Button Style="{StaticResource storebuttonstyle}" Content="Historia dostaw" HorizontalAlignment="Left" Margin="126,170,0,0" VerticalAlignment="Top" Width="397" Command="{Binding OpenSuppliesHistoryWindowCommand}" CommandParameter="true"/>
+        <Button Style="{StaticResource storebuttonstyle}" Content="Usuń" HorizontalAlignment="Left" Margin="126,195,0,0" VerticalAlignment="Top" Width="397" Command="{Binding RemoveOrderCmd}" />
+        <Button Style="{StaticResource storebuttonstyle}" Content="nowy dostawca" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="102" Height="48" Command="{Binding OpenNewSupplierWindowCommand}" CommandParameter="true"/>
+    </Grid>
+</UserControl>

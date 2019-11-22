@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Delivery>
+    <date>2017-10-20T00:00:00</date>
+    <realised>false</realised>
+    <delivery_guid>8fe671a5-ee46-4aeb-96be-7ec6ca059709</delivery_guid>
+    <supplier_guid>55a510f0-ee94-4bf4-a555-5292e37783d0</supplier_guid>
+  </Delivery>
+  <Delivery>
+    <date>2017-10-19T00:00:00</date>
+    <realised>false</realised>
+    <delivery_guid>b143f9fc-ab6b-4943-a9aa-67fd20643df9</delivery_guid>
+    <supplier_guid>fab75f5d-15e1-4961-a3c6-8e87ec2adc7a</supplier_guid>
+  </Delivery>
+  <Delivery>
+    <date>2017-10-18T00:00:00</date>
+    <realised>true</realised>
+    <delivery_guid>1f035076-c3c4-4a23-bebf-ba72ea09f00a</delivery_guid>
+    <supplier_guid>602b8dba-ca9c-439e-8635-165094ba0737</supplier_guid>
+  </Delivery>
+  <Delivery>
+    <date>2017-10-15T00:00:00</date>
+    <realised>false</realised>
+    <delivery_guid>93930eb7-3314-4eb7-a72d-a5cb0685f9f7</delivery_guid>
+    <supplier_guid>fb0b8e09-5db6-4915-8994-fc8de1e976af</supplier_guid>
+  </Delivery>
+  <Delivery>
+    <date>2017-10-14T00:00:00</date>
+    <realised>false</realised>
+    <delivery_guid>c68d90b3-220b-413b-b0e7-975b1b09d797</delivery_guid>
+    <supplier_guid>03566f23-02dd-496a-a51b-d2002ff20122</supplier_guid>
+  </Delivery>
+  <Delivery>
+    <date>2017-10-13T00:00:00</date>
+    <realised>false</realised>
+    <delivery_guid>a62aa456-2a2d-4006-bb60-17660fddfeca</delivery_guid>
+    <supplier_guid>26167304-e374-4334-b9bc-611225040a80</supplier_guid>
+  </Delivery>
+  <Delivery>
+    <date>2017-10-11T00:00:00</date>
+    <realised>true</realised>
+    <delivery_guid>9d4150ab-a8a3-4f6b-bc8c-3b3d879ba4c5</delivery_guid>
+    <supplier_guid>0fc4215f-0671-418e-8d29-3e1a6dbd1e61</supplier_guid>
+  </Delivery>
+</ArrayOfDelivery>

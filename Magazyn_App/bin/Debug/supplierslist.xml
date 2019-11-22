@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSupplier xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Supplier>
+    <supplier_name>Zafira sp. z o.o.</supplier_name>
+    <nip_number>768-594-84-73</nip_number>
+    <city_name>Opole </city_name>
+    <street_name>Żeromskiego 9</street_name>
+    <supplier_guid>f3ed2fea-267c-4776-b046-8989c08e83a6</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Lucy's Milk</supplier_name>
+    <nip_number>687-968-59-49</nip_number>
+    <city_name>Opole </city_name>
+    <street_name>Sienkiewicz 2</street_name>
+    <supplier_guid>0341bb6f-2f54-4613-b506-9739bf36a76d</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Warzywa &amp; Owoce</supplier_name>
+    <nip_number>687-968-57-58</nip_number>
+    <city_name>Wrocław</city_name>
+    <street_name>Krakowska 67</street_name>
+    <supplier_guid>9fd2a83e-14ec-4270-a0c8-4b67c3433f50</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Owocowa Hurtownia sp. z o.o.</supplier_name>
+    <nip_number>454-576-89-87</nip_number>
+    <city_name>Wrocław</city_name>
+    <street_name>Traugutta 7</street_name>
+    <supplier_guid>4e709f3d-0688-4447-9e98-dabdd2e7f7ec</supplier_guid>
+  </Supplier>
+  <Supplier>
+    <supplier_name>Dilara sp. j.</supplier_name>
+    <nip_number>675-678-98-76</nip_number>
+    <city_name>Opole </city_name>
+    <street_name>Niemodlińska 7</street_name>
+    <supplier_guid>abcc11a1-4464-4653-be66-a294a4592595</supplier_guid>
+  </Supplier>
+</ArrayOfSupplier>
